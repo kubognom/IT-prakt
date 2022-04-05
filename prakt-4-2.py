@@ -23,17 +23,12 @@ regressor.fit(X_train, y_train)
 print("\nLinearRegression()")
 print(regressor.intercept_)
 print(regressor.coef_)
-#plt.scatter(dataset['YearsExperience'], dataset['Salary'], color = 'b', label='')
-#plt.xlabel("Время")
-#plt.ylabel("Рубли")
-#plt.show()
+
+
 y_pred = regressor.predict(X_test)
-df = pd. DataFrame({'Actual': y_test, 'Predicted': y_pred})
-df
-df.plot(kind='bar')
-plt.grid(which='major', linestyle='-', linewidth='0.5', color='green')
-plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
-plt.show()
-plt.scatter(X_test, y_test, color='gray')
+
+plt.scatter(dataset['YearsExperience'], dataset['Salary'], color = 'b', label='')
+plt.xlabel("Время")
+plt.ylabel("Рубли")
 plt.plot(X_test, y_pred, color='red', linewidth=2)
 plt.show()
